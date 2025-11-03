@@ -8,20 +8,20 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400','500','700'], variable: '--font-jakarta', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'Sottam Aich — AI/ML • Cloud • Cybersecurity',
+  title: 'Sottam Aich',
   description: 'I build intelligent, secure, and scalable systems that bridge innovation with reliability.',
   metadataBase: new URL('https://sottam-aich-portfolio.vercel.app'),
   openGraph: {
-    title: 'Sottam Aich — AI/ML • Cloud • Cybersecurity',
+    title: 'Sottam Aich',
     description: 'I build intelligent, secure, and scalable systems that bridge innovation with reliability.',
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sottam Aich — AI/ML • Cloud • Cybersecurity',
+    title: 'Sottam Aich',
     description: 'I build intelligent, secure, and scalable systems that bridge innovation with reliability.'
   },
-  icons: { icon: '/favicon.ico' }
+  icons: { icon: 'assets\my-notion-face-portrait.png' }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
