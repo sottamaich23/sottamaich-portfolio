@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     title: 'Sottam Aich',
     description: 'I build intelligent, secure, and scalable systems that bridge innovation with reliability.'
   },
-  icons: { icon: 'assets\my-notion-face-portrait.png' }
+  icons: {
+    icon: '/assets/sottam-icon.png',
+    shortcut: '/assets/sottam-icon.png',
+    apple: '/assets/sottam-icon.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
