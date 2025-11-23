@@ -158,7 +158,15 @@ function NetworkPoints() {
     if (group.current) {
       group.current.rotation.y = t * 0.05; // Continuous slow rotation
       group.current.rotation.x = Math.sin(t * 0.2) * 0.1; // Subtle tilt
-      group.current.position.x = 2.0; // push sphere to the right side
+
+      // Adjust position based on device
+      if (isMobile) {
+        group.current.position.x = 0;
+        group.current.position.y = -1.5;
+      } else {
+        group.current.position.x = 2.0; // push sphere to the right side
+        group.current.position.y = 0;
+      }
     }
   });
 

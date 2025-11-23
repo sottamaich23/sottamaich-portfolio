@@ -14,10 +14,10 @@ export function Hero() {
 
       {/* Content */}
       <div className="container-px max-w-7xl mx-auto relative z-10 flex flex-col justify-center min-h-screen">
-        <motion.div 
-          initial={{ opacity: 0, y: 12 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.5 }} 
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="w-full max-w-3xl space-y-5 md:space-y-6 pt-16 md:pt-0"
         >
           <div className="space-y-2">
@@ -38,7 +38,7 @@ export function Hero() {
               that bridge innovation with reliability.
             </p>
           </div>
-          <div className="flex items-center gap-4 pt-6">
+          <div className="flex flex-wrap items-center gap-4 pt-6">
             <a href="https://drive.google.com/file/d/1ZBrEpBOJ8E5RRDiFxbX3jbx0jNOI4Ccr/view?usp=drive_link" target="_blank" rel="noreferrer" className="group">
               <Button size="lg" className="rounded-lg shadow-sm hover:shadow transition-shadow bg-foreground/10 hover:bg-foreground/15 ring-1 ring-inset ring-foreground/10 group-hover:ring-foreground/20 text-foreground">
                 Resume
