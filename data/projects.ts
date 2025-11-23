@@ -13,7 +13,7 @@ export const projects: Project[] = [
     description: 'Detects driver fatigue using CNNs and real-time video feed with OpenCV + Dlib.',
     image: '/assets/projects/ChatGPT Image Nov 3, 2025, 11_58_49 PM.png',
     tech: ['Python', 'OpenCV', 'TensorFlow', 'Dlib', 'SVM'],
-    github: '#',
+    github: 'https://github.com/sottamaich23/driver_drowsiness_elimination_system',
     demo: '#'
   },
   {
