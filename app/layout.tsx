@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk, Plus_Jakarta_Sans } from 'next/font/google';
 import '../styles/globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
+import { BackgroundConstellations } from '@/components/background-constellations';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' });
@@ -31,10 +31,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} ${jakarta.variable} bg-background text-foreground transition-colors duration-500 ease-in-out`}>
-        <ThemeProvider>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} ${jakarta.variable} bg-background text-foreground overflow-x-hidden`}>
+        <div className="canvas-container">
+          <BackgroundConstellations />
+        </div>
+        <main>
           {children}
-        </ThemeProvider>
+        </main>
       </body>
     </html>
   );

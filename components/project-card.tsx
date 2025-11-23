@@ -21,13 +21,13 @@ export function ProjectCard({ image, title, description, tech, github, demo }: P
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.4 }}
-      className="group overflow-hidden rounded-xl border border-white/10 bg-card/90 shadow-soft hover:shadow-lg hover:shadow-black/30 transition-shadow"
+      className="group overflow-hidden rounded-xl border border-foreground/10 bg-foreground/5 shadow-soft hover:shadow-lg hover:shadow-foreground/5 transition-shadow"
     >
       <div className="relative w-full aspect-[16/9] overflow-hidden">
         <Image src={image} alt={title} fill className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
       </div>
       <div className="p-5 space-y-3">
-        <h3 className="font-spaceGrotesk text-lg text-white/90">{title}</h3>
+        <h3 className="font-spaceGrotesk text-lg text-foreground/90">{title}</h3>
         <p className="text-sm text-white/70">{description}</p>
         <div className="flex flex-wrap gap-2 pt-1">
           {tech.map((t) => (

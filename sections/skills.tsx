@@ -5,14 +5,14 @@ import { skills } from '@/data/skills';
 
 function Group({ title, items }: { title: string; items: string[] }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-card/80 p-5">
-      <h3 className="font-spaceGrotesk text-lg sm:text-xl font-semibold text-white/90 mb-3 border-b border-white/5 pb-2">{title}</h3>
+    <div className="rounded-xl border border-foreground/10 bg-foreground/5 p-5">
+      <h3 className="font-spaceGrotesk text-lg sm:text-xl font-semibold text-foreground/90 mb-3 border-b border-foreground/5 pb-2">{title}</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {items.map((item) => (
           <motion.div
             key={item}
             whileHover={{ scale: 1.05 }}
-            className="capitalize text-sm font-medium text-white/85 rounded-full px-4 py-2 bg-white/5 dark:bg-black/5 hover:bg-white/10 hover:shadow-lg hover:shadow-white/10 transition-transform duration-200 ease-in-out"
+            className="capitalize text-sm font-medium text-foreground/85 rounded-full px-4 py-2 bg-foreground/5 hover:bg-foreground/10 hover:shadow-lg hover:shadow-foreground/10 transition-transform duration-200 ease-in-out"
           >
             {item}
           </motion.div>

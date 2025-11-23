@@ -20,7 +20,7 @@ export function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/30 border-b border-white/6"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-foreground/5 border-b border-foreground/10"
     >
       <nav className="container-px max-w-6xl mx-auto flex items-center justify-between h-14">
         <Link href="#home" className="flex items-center gap-3">
@@ -33,7 +33,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="relative text-sm text-white/70 hover:text-white transition-colors group"
+                className="relative text-[15px] text-foreground/70 hover:text-foreground transition-colors group font-medium"
               >
                 <span>{link.label}</span>
                 <span className="pointer-events-none absolute -bottom-1 left-0 h-[2px] w-0 bg-white/80 transition-all duration-300 group-hover:w-full" />
@@ -42,7 +42,7 @@ export function Navbar() {
           ))}
         </ul>
         <div className="flex items-center gap-3">
-          <a href="#contact" className="md:hidden text-sm text-white/80">Contact</a>
+          <a href="#contact" className="md:hidden text-[15px] text-white/80 font-medium">Contact</a>
         </div>
       </nav>
     </motion.header>

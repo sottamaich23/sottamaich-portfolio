@@ -13,7 +13,11 @@ body,
 }
 
 body {
-  @apply bg-background text-foreground antialiased leading-7 text-[16px] sm:text-[17px];
+  @apply antialiased leading-7 text-[16px] sm:text-[17px];
+}
+
+body {
+  @apply bg-background text-foreground;
 }
 
 /* Smooth scroll */
@@ -43,5 +47,29 @@ html {
   animation: gradientShift 12s ease-in-out infinite;
   filter: blur(40px);
 }
+
+/* Ensure proper containment for constellation animations */
+.canvas-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+  z-index: 0; /* keep canvas layers behind main content (main uses z-index:10) */
+}
+
+/* Fix for main content to ensure proper z-index and prevent overflow */
+main {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  overflow-x: hidden;
+  contain: paint;
+  isolation: isolate;
+}
+
+
 
 
